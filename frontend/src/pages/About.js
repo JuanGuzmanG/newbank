@@ -1,4 +1,4 @@
-import { Card, Row, Col, Button } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import React from "react";
 import { FaHandHoldingUsd, FaMobileAlt, FaChartLine, FaRegStar, FaRegSmile } from "react-icons/fa";
 
