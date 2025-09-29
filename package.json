@@ -1,0 +1,26 @@
+{
+  "name": "newbank",
+  "version": "1.0.0",
+  "description": "app web newbank",
+  "main": "index.js",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start:frontend": "npm --workspace=frontend start",
+    "start:backend": "npm run dev --workspace=backend",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "react-icons": "^5.5.0"
+  }
+}
