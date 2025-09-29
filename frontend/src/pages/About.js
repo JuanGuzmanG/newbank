@@ -1,10 +1,8 @@
 import { Card, Row, Col, Button } from "react-bootstrap";
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { FaLock, FaHandHoldingUsd, FaMobileAlt, FaChartLine, FaRegStar, FaRegSmile } from "react-icons/fa";
+import { FaHandHoldingUsd, FaMobileAlt, FaChartLine, FaRegStar, FaRegSmile } from "react-icons/fa";
 
 function About() {
-    const navigate = useNavigate();
 
     return (
         <div
