@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./infrastructure/database");
+require("./infrastructure/database");
 const bodyParser = require("body-parser");
 const MongoUserRepository = require("./adapter/orm/MongoUserRepository");
 const AuthService = require("./domain/service/AuthService");
