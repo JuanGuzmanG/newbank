@@ -1,7 +1,7 @@
 import React, { createContext, useState } from "react";
 
 export const AuthContext = createContext();
-
+export const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:3001";
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [token, setToken] = useState(null);
@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const isAuthenticated = !!user;
 
     const login = async (email, password) => {
-        const res = await fetch("http://localhost:3001/api/auth/ingreso",{
+        const res = await fetch(`${API_URL}/api/auth/ingreso`,{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
