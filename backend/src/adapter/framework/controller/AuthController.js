@@ -2,6 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 module.exports = (authService) => {
+
+    router.get("/test", (req, res) => {
+        res.json({message: "Auth service is running"});
+    });
+
     router.post("/registro", async (req, res) => {
         try{
             const user = await authService.register(req.body);
