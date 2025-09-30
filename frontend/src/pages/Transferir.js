@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { AuthContext } from "../Context/AuthContext";
+import {API_URL, AuthContext} from "../Context/AuthContext";
 import { Card, Form, Button, Modal } from "react-bootstrap";
 
 function Transferir() {
@@ -13,7 +13,7 @@ function Transferir() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch("http://localhost:3001/api/user/transferir", {
+        const res = await fetch(`${API_URL}/api/user/transferir`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

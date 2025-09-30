@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Button, Card, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import {API_URL} from "../Context/AuthContext";
 
 function Register() {
     const [form, setForm] = useState({ documento: "", nombre: "", apellido: "", email: "", password: ""});
@@ -11,7 +12,7 @@ function Register() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch("http://localhost:3001/api/auth/registro", { method: "POST", headers: { "Content-Type":"application/json" }, body: JSON.stringify(form)});
+        const res = await fetch(`${API_URL}/api/auth/registro`, { method: "POST", headers: { "Content-Type":"application/json" }, body: JSON.stringify(form)});
         const data = await res.json();
         if (res.ok) {
             setShow(true); // muestra modal

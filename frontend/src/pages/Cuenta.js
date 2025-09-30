@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../Context/AuthContext";
+import {API_URL, AuthContext} from "../Context/AuthContext";
 import { Card, Table } from "react-bootstrap";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
@@ -18,7 +18,7 @@ function Cuenta() {
     useEffect(() => {
         async function fetchData() {
 
-            const resSaldo = await fetch("http://localhost:3001/api/user/saldo", {
+            const resSaldo = await fetch(`${API_URL}/api/user/saldo`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (resSaldo.ok) {
