@@ -7,13 +7,13 @@ class MongoUserRepository extends UserRepository{
         return await userCreated.save();
     }
     async findByEmail(email){
-        return UserModel.findOne({email});
+        return await UserModel.findOne({email});
     }
     async findById(_id){
-        return UserModel.findOne({ _id });
+        return await  UserModel.findOne({ _id });
     }
     async findByDocument(documento) {
-        return UserModel.findOne({documento});
+        return await  UserModel.findOne({documento});
     }
 }
 module.exports = MongoUserRepository;
