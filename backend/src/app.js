@@ -13,6 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 //configuracion mongodb
 const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/newbank";
+console.log(uri);
 db.connect(uri);
 
 //crear repositorio y servicios
