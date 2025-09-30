@@ -25,7 +25,7 @@ function Cuenta() {
                 const data = await resSaldo.json();
                 setSaldo(typeof data.Saldo === "number" ? data.Saldo : 0);
             }
-            const resMov = await fetch("http://localhost:3001/api/user/movimientos", {
+            const resMov = await fetch(`${API_URL}/api/user/movimientos`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (resMov.ok) {
